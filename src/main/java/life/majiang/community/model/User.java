@@ -7,6 +7,7 @@ public class User {
     private String token;
     private Long gmtCreate;
     private Long gmtModified;
+    private String bio;
 
     public Integer getId() {
         return id;
@@ -54,5 +55,13 @@ public class User {
 
     public void setGmtModified(Long gmtModified) {
         this.gmtModified = gmtModified;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 }

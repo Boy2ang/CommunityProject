@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
@@ -58,6 +57,7 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githupUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
+            user.setBio(githupUser.getBio());
             userMapper.insert(user);
             //如果登录成功了,将user用户的token存到cookie中
             response.addCookie(new Cookie("token",token));

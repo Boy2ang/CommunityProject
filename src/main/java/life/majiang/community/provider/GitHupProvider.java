@@ -40,6 +40,7 @@ public class GitHupProvider {
         try {
             Response response = client.newCall(request).execute();
             String string = response.body().string();
+            System.out.println(string);
             GitHupUser gitHupUser = JSON.parseObject(string, GitHupUser.class);
             return gitHupUser;
         } catch (IOException e) {

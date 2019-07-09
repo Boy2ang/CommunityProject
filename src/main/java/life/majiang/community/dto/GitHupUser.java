@@ -4,6 +4,7 @@ public class GitHupUser {
     private String name; //名字
     private String bid; //描述
     private Long id; //编号
+    private String bio;
 
     public String getName() {
         return name;
@@ -29,12 +30,21 @@ public class GitHupUser {
         this.id = id;
     }
 
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
     @Override
     public String toString() {
         return "GitHupUser{" +
                 "name='" + name + '\'' +
                 ", bid='" + bid + '\'' +
                 ", id=" + id +
+                ", bio='" + bio + '\'' +
                 '}';
     }
 }
